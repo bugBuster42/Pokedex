@@ -1,5 +1,6 @@
 import './App.css';
 import PokemonCard from "./components/PokemonCard"
+import NavBar from "./components/NavBar"
 import { useState } from "react";
 
 
@@ -33,10 +34,10 @@ function App() {
     ]);
 
 
-  const pokemon = pokemonList[pokemonIndex];
-  
   const [pokemonIndex, setPokemonIndex] = useState(0);
+  const pokemon = pokemonList[pokemonIndex];
 
+ 
 
   const handleRename = () => {
     const newPokemonList = [...pokemonList];
@@ -51,8 +52,7 @@ function App() {
   return (
     <div>
      <PokemonCard pokemon={pokemon}/>
-     {pokemonIndex > 0 ? <button onClick={() =>setPokemonIndex(pokemonIndex -1)}>Pokemon précedent</button> : null}
-     {pokemonIndex < pokemonList.length - 1 ?  <button onClick={() =>setPokemonIndex(pokemonIndex +1)}>Pokemon suivant</button> : null }
+     <NavBar pokemonIndex={pokemonIndex} setPokemonIndex ={setPokemonIndex} pokemonList={pokemonList}/>
      <button onClick={handleRename}>Renomme le en : Super Pikachu</button>
     </div>
   );
