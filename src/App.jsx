@@ -35,9 +35,9 @@ function App() {
 
 
   const [pokemonIndex, setPokemonIndex] = useState(0);
+
   const pokemon = pokemonList[pokemonIndex];
 
- 
 
   const handleRename = () => {
     const newPokemonList = [...pokemonList];
@@ -52,7 +52,11 @@ function App() {
   return (
     <div>
      <PokemonCard pokemon={pokemon}/>
-     <NavBar pokemonIndex={pokemonIndex} setPokemonIndex ={setPokemonIndex} pokemonList={pokemonList}/>
+     
+      {pokemonList.map((p, index) => (
+        <NavBar key = {p.name} name = {p.name} handleBtnClick={() =>setPokemonIndex(index)} />
+      ))}
+     
      <button onClick={handleRename}>Renomme le en : Super Pikachu</button>
     </div>
   );
