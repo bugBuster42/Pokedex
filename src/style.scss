@@ -1,0 +1,44 @@
+$font: roboto, sans-serif;
+$primary: rgb(69, 111, 156);
+$secondary: rgb(132, 133, 134);
+$light:rgb(246, 243, 243);
+$dark: rgb(52, 52, 52);
+$sizeS: 1rem;
+$sizeM: 2rem;
+$sizeL: 4rem;
+$sizXL: 8rem;
+
+.card {
+    background-color: $secondary;
+    border-radius: 8px;
+    border: solid $primary 8px;
+    box-shadow: 10px 5px 20px 1px rgba(6, 6, 6, 0.78);
+}
+
+.figure {
+    background-color: $primary;
+    border-radius: 8px;
+    box-shadow: 25px 12px 48px -3px rgba(6, 6, 6, 0.78);
+    color: $light;
+    font-size: $sizeM;
+}
+
+.navbar {
+    button{
+    background-color: $dark;
+    color: $light;
+    width: 300px;
+    margin : 5px;
+    border: solid $light 2px;
+    box-shadow: 10px 0px -2px rgba(0, 0, 0, 0.42);
+    }
+}
+
+.rename {
+    background-color: $primary;
+    margin : 5px;
+    width: 290px;
+    height: 50px;
+    border-radius: 49% 51% 50% 50% / 2% 0% 100% 98% ;
+
+}

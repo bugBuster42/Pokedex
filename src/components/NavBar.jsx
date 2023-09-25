@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 function NavBar ({name, handleBtnClick}) {
 return (
-    <div>
+    <div className="navbar">
         <button onClick={handleBtnClick}>{name}</button> 
     </div>
 )
