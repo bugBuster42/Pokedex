@@ -1,7 +1,9 @@
 import './App.css';
+import './style.scss';
 import PokemonCard from "./components/PokemonCard"
 import NavBar from "./components/NavBar"
 import { useState } from "react";
+
 
 
 function App() {
@@ -50,14 +52,14 @@ function App() {
 
 
   return (
-    <div>
+    <div className="card">
      <PokemonCard pokemon={pokemon}/>
      
       {pokemonList.map((p, index) => (
         <NavBar key = {p.name} name = {p.name} handleBtnClick={() =>setPokemonIndex(index)} />
       ))}
      
-     <button onClick={handleRename}>Renomme le en : Super Pikachu</button>
+     <button onClick={handleRename} className="rename">Renomme le -> Super Pikachu</button>
     </div>
   );
 
